@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050110;
+  --foreground: #FFFFFF;
+  --primary: #8B5CF6;
+  --secondary: #3B82F6;
+  --accent: #06B6D4;
+  --card: #1E1B4B;
+  --text-muted: #94A3B8;
+  --glow-purple: #8B5CF680;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-card: var(--card);
+  --color-muted: var(--text-muted);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Neon Glow Effects */
+.neon-glow {
+  text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
+}
+
+.neon-border {
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 10px var(--primary);
+}
+
+.glass {
+  background: rgba(30, 27, 75, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
